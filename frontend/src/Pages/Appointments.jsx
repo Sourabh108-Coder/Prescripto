@@ -75,8 +75,6 @@ const Appointments = () => {
   {
     const docinfo=doctors.find(doc=> doc._id===docId);
 
-    //console.log("hi"+docinfo.name)
-
     setsavedocinfo(docinfo);
 
     console.log("hello"+savedocinfo);
