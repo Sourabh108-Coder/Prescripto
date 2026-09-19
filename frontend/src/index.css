@@ -2153,6 +2153,10 @@ html {
 
 @media screen and (max-width: 768px) {
 
+  .app{
+    max-width: 90vw;
+  }
+
     .Nav-bar {
         width: 100%;
         min-height: 65px;
@@ -2318,7 +2322,7 @@ html {
         width: 100%;
         display: flex;
         gap:1rem;
-        
+
         padding: 14px 8px;
 
         color: #333;
@@ -2507,4 +2511,294 @@ html {
         padding-right: 10px;
     }
 
+}
+
+.grp-para-mob
+{
+  display: none;
+}
+
+/* Home header */
+@media screen and (max-width: 768px) {
+
+     .grp-para
+     {
+      display: none;
+     }
+
+     .grp-para-mob
+     {
+      display: block;
+     }
+
+    .header-sec {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        margin: 0 !important;
+        padding: 30px 16px 0 !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* ===============================
+       LEFT SIDE
+    =============================== */
+
+    .left-side {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+
+    /* ===============================
+       HEADING
+    =============================== */
+
+    .head-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+
+        box-sizing: border-box !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    /* ===============================
+       AVATAR + PARA
+    =============================== */
+
+    .grp-img-text {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 20px auto !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        text-align: center !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ===============================
+       AVATAR GROUP
+    =============================== */
+
+    .group {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin-left: 5rem !important;
+        padding: 0 !important;
+    }
+
+
+    .grp,
+    .grp1,
+    .grp2 {
+        width: 60px !important;
+        height: 60px !important;
+
+        flex-shrink: 0 !important;
+
+        object-fit: cover !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    .grp1,
+    .grp2 {
+        margin-left: -10px !important;
+    }
+
+    .grp1{
+      margin-left: -20px !important;
+    }
+
+
+    /* ===============================
+       PARAGRAPH
+    =============================== */
+
+    .grp-para-mob {
+        width: 100% !important;
+        max-width: 350px !important;
+
+        margin: 10px auto 0 !important;
+        padding: 6px !important;
+
+        text-align: center !important;
+
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+
+        white-space: normal !important;
+        overflow: visible !important;
+
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* ===============================
+       BUTTON
+    =============================== */
+
+    .anchor {
+        display: inline-flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 auto !important;
+
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* ===============================
+       RIGHT SIDE
+    =============================== */
+
+    .right-side {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 25px auto 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: flex-end !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+    }
+
+
+    .grp-doc {
+        width: 90% !important;
+        max-width: 380px !important;
+
+        height: auto !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        object-fit: contain !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .header-sec {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+
+    .head-heading {
+        font-size: 30px !important;
+    }
+
+
+    .grp-para-mob {
+        max-width: 330px !important;
+        font-size: 12.5px !important;
+    }
+
+
+    .grp-doc {
+        width: 94% !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .header-sec {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+
+    .head-heading {
+        font-size: 30px !important;
+    }
+
+
+    .grp-para-mob {
+        max-width: 300px !important;
+        font-size: 12px !important;
+    }
+
+
+    .grp-doc {
+        width: 100% !important;
+    }
 }

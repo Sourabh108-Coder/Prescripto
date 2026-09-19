@@ -15,6 +15,7 @@ const Headers = () => {
             <img src='https://cdn.esquimaltmfrc.com/wp-content/uploads/2015/09/flat-faces-icons-circle-man-6-940x940.png' className='grp2'/>
           </div>
           <p className='grp-para'>Simply Browse through our extensive list of trusted doctors,<br/>schedule your appointment hassle-free</p>
+          <p className='grp-para-mob'>Simply Browse through our extensive list of trusted doctors,schedule your appointment hassle-free</p>
         </div>
 
         <a href='#specialityDoc' className='anchor'>Book Appointment{<FaArrowRight className='arrow-icon'/>}</a>
