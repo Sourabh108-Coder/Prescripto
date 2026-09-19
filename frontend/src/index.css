@@ -3076,3 +3076,363 @@ html {
         font-size: 11.5px;
     }
 }
+
+
+/* Top Doctor Section */
+/* =========================================================
+   TOP DOCTORS - MOBILE RESPONSIVE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .top-doc {
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 40px 16px 45px !important;
+
+        box-sizing: border-box;
+
+        text-align: center;
+
+        overflow: hidden;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .top_name {
+        width: 100% !important;
+
+        margin: 0 0 25px !important;
+        padding: 0 !important;
+
+        font-size: 27px !important;
+        line-height: 1.2 !important;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       DOCTOR GRID
+    ===================================================== */
+
+    .map-doc {
+        width: 100% !important;
+        max-width: 650px !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 16px 12px !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       DOCTOR CARD
+    ===================================================== */
+
+    .disp-doc {
+        width: 100% !important;
+        min-width: 0 !important;
+
+        padding: 0 0 14px !important;
+        margin: 0 !important;
+
+        box-sizing: border-box;
+
+        border-radius: 12px;
+
+        background: #f8f9ff;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        text-align: left;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+
+    .disp-doc:active {
+        transform: scale(0.98);
+    }
+
+
+    /* =====================================================
+       DOCTOR IMAGE
+    ===================================================== */
+
+    .top-doc-img {
+        width: 100% !important;
+
+        height: 170px !important;
+
+        display: block;
+
+        /* object-fit:contain; */
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       AVAILABLE STATUS
+    ===================================================== */
+
+    .top-doc-desp {
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 5px !important;
+
+        margin: 10px 10px 5px !important;
+        padding: 0 !important;
+
+        min-height: 16px;
+
+        box-sizing: border-box;
+    }
+
+
+    .dot,
+    .dotu {
+        width: 7px !important;
+        height: 7px !important;
+
+        min-width: 7px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-radius: 50%;
+
+        box-sizing: border-box;
+    }
+
+
+    .tetu,
+    .tetu2 {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 10px !important;
+
+        line-height: 1.2 !important;
+
+        white-space: nowrap;
+    }
+
+
+    /* =====================================================
+       DOCTOR NAME + SPECIALITY
+    ===================================================== */
+
+    .para {
+        width: auto !important;
+
+        margin: 4px 10px 0 !important;
+        padding: 0 !important;
+
+        font-size: 12px !important;
+
+        line-height: 1.4 !important;
+
+        text-align: left;
+
+        overflow-wrap: break-word;
+    }
+
+
+    .para1 {
+        margin-top: 2px !important;
+
+        font-size: 13px !important;
+
+        color: #222;
+    }
+
+
+    /* =====================================================
+       MORE BUTTON
+    ===================================================== */
+
+    .more-btn {
+        display: block;
+
+        margin: 28px auto 0 !important;
+
+        min-width: 110px;
+
+        min-height: 42px;
+
+        padding: 0 24px;
+
+        border: none;
+        border-radius: 24px;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+
+        transition:
+            transform 0.2s ease,
+            background 0.2s ease;
+    }
+
+
+    .more-btn:active {
+        transform: scale(0.96);
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .top-doc {
+        padding: 32px 13px 38px !important;
+    }
+
+
+    .top_name {
+        font-size: 25px !important;
+
+        margin-bottom: 22px !important;
+    }
+
+
+    .map-doc {
+        gap: 14px 10px !important;
+    }
+
+
+    .disp-doc {
+        border-radius: 11px;
+
+        padding-bottom: 12px !important;
+    }
+
+
+    .top-doc-img {
+        height: 145px !important;
+    }
+
+
+    .top-doc-desp {
+        margin: 8px 8px 4px !important;
+
+        gap: 4px !important;
+    }
+
+
+    .dot,
+    .dotu {
+        width: 6px !important;
+        height: 6px !important;
+
+        min-width: 6px !important;
+    }
+
+
+    .tetu,
+    .tetu2 {
+        font-size: 9px !important;
+    }
+
+
+    .para {
+        margin-left: 8px !important;
+        margin-right: 8px !important;
+
+        font-size: 11px !important;
+    }
+
+
+    .para1 {
+        font-size: 12px !important;
+    }
+
+
+    .more-btn {
+        min-width: 105px;
+
+        min-height: 40px;
+
+        margin-top: 25px !important;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .top-doc {
+        padding: 28px 10px 32px !important;
+    }
+
+
+    .top_name {
+        font-size: 23px !important;
+
+        margin-bottom: 20px !important;
+    }
+
+
+    .map-doc {
+        gap: 12px 8px !important;
+    }
+
+
+    .top-doc-img {
+        height: 125px !important;
+    }
+
+
+    .top-doc-desp {
+        margin-left: 7px !important;
+        margin-right: 7px !important;
+    }
+
+
+    .para {
+        margin-left: 7px !important;
+        margin-right: 7px !important;
+
+        font-size: 10.5px !important;
+    }
+
+
+    .para1 {
+        font-size: 11.5px !important;
+    }
+}
