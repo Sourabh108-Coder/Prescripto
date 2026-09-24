@@ -10,7 +10,7 @@ const Banner = () => {
       <div className='left-side-banner'>
         <div>
             <p className='head-heading2'><b>Book Appointments</b></p>
-            <p className='head-heading2'><b>With 100+ Trusted Doctors</b></p>
+            <p className='head-heading2 head_bot'><b>With 100+ Trusted Doctors</b></p>
 
             <button className='anchor' onClick={()=>navigate("/login")}>Create Account</button>
         </div>

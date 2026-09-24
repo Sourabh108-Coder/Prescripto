@@ -3436,3 +3436,137 @@ html {
         font-size: 11.5px !important;
     }
 }
+
+
+/* Login banner responsiveness */
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+
+  .font-div {
+    height: fit-content;
+  }
+
+  .left-side-banner {
+    width: 100%;
+    margin:auto;
+  }
+
+  .right-side-banner {
+    width: 45%;
+    margin-top: 2rem;
+    min-height: 380px;
+  }
+
+  .head-heading2 {
+    font-size: 37px;
+  }
+
+  .grp-doc {
+    max-height: 370px;
+  }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+  .font-div {
+    width: 100%;
+    /* min-height: 480px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 30px 20px 0;
+    text-align: center;
+  }
+
+  .left-side-banner {
+    width: 100%;
+    /* padding: 10px 5px 25px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-side-banner > div {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .head-heading2 {
+    margin: 0 0 6px;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  .anchor {
+    margin-top: 3rem;
+    padding: 13px 25px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+
+  .right-side-banner {
+    width: 100%;
+    min-height: 260px;
+    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .grp-doc {
+    width: 280px;
+    max-width: 90%;
+    max-height: 280px;
+    object-fit: contain;
+    object-position: bottom center;
+  }
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 380px) {
+
+  .font-div {
+    padding: 25px 15px 0;
+  }
+
+  .head-heading2 {
+    font-size: 30px;
+    margin-right: 2rem;
+  }
+
+  .head_bot
+  {
+    margin-bottom: 2rem;
+  }
+
+  .anchor {
+    padding: 12px 22px;
+    font-size: 20px;
+  }
+
+  .right-side-banner {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .grp-doc {
+    width: 240px;
+    max-height: 240px;
+  }
+}
