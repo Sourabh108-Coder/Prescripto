@@ -36,7 +36,7 @@ function App() {
         <Route path='/predict' element={<PredictPage/>}/>
       </Routes>
 
-      <FloatingPredictButton/>
+      {/* <FloatingPredictButton/> */}
 
       <Footer/>
 

@@ -3570,3 +3570,134 @@ html {
     max-height: 240px;
   }
 }
+
+/* Footer responsiveness */
+/* =========================
+   FOOTER - MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .foot-sec {
+    width: 100%;
+    padding: 35px 20px 25px;
+    margin-top: 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .fo-li
+  {
+    width:80vw;
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  /* Logo + Prescripto */
+
+  .left-side-footer {
+    width: 100%;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .head-heading1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: justify;
+  }
+
+  .left-side-footer p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+
+  /* Company */
+
+  .center-side-footer {
+    width: 100%;
+  }
+
+  .foot-para {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+  .footer-list {
+    padding: 0;
+    margin-left: 2rem;
+  }
+
+  .footer-list li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+
+  /* Get In Touch */
+
+  .right-side-footer {
+    width: 100%;
+    padding-right: 1rem;
+  }
+
+  .right-side-footer .footer-list li {
+    word-break: break-word;
+  }
+}
+
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+  .foot-sec {
+    gap: 0px;
+  }
+
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  .head-heading1 {
+    font-size: 22px;
+  }
+
+  .left-side-footer p {
+    font-size: 13px;
+  }
+
+  .foot-para {
+    font-size: 16px;
+  }
+
+  .footer-list li {
+    font-size: 13px;
+  }
+}
+
+.last-des
+{
+  width: 90vw;
+}

@@ -14,7 +14,7 @@ const Home = () => {
         <Doctorspeciality/>
         <Topdoctor/>
         <Banner/>
-        <AiSymptomChecker/>
+        {/* <AiSymptomChecker/> */}
     </div>
   )
 }
