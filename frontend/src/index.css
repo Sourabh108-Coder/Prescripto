@@ -560,6 +560,13 @@ html {
   width:35vw;
 }
 
+.fo-li
+{
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
 .right-side-footer
 {
   margin-top: 3rem;
@@ -3595,7 +3602,6 @@ html {
     width:80vw;
     display: flex;
     justify-content: center;
-    /* border: 2px solid red; */
   }
 
   /* Logo + Prescripto */
@@ -3695,9 +3701,10 @@ html {
   .footer-list li {
     font-size: 13px;
   }
+
+  .last-des
+  {
+    width: 90vw;
+  }
 }
 
-.last-des
-{
-  width: 90vw;
-}
