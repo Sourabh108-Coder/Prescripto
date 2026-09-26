@@ -3708,3 +3708,247 @@ html {
   }
 }
 
+
+/* Doctors Page Responsive */
+
+@media (max-width: 600px) {
+
+  .doc-appo {
+    width: 100% !important;
+    padding: 20px 12px 30px !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+
+  .doc-para-spec {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0 0 18px;
+  }
+
+  /* IMPORTANT:
+     Remove desktop flex/positioning */
+  .sided2 {
+    width: 100% !important;
+    display: block !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* =========================
+     SPECIALITY MENU
+  ========================= */
+
+  .menu-doc {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    gap: 8px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin: 0 0 15px !important;
+    padding: 4px 2px 12px !important;
+
+    box-sizing: border-box;
+
+    scrollbar-width: none;
+  }
+
+  .menu-doc::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu-doc p {
+    flex: 0 0 auto !important;
+
+    width: auto !important;
+    min-width: max-content !important;
+
+    margin: 0 !important;
+    padding: 9px 14px !important;
+
+    white-space: nowrap;
+
+    border-radius: 25px;
+
+    background: #f4f7fb;
+    border: 1px solid #e2e8f0;
+
+    color: #444;
+
+    font-size: 12px;
+
+    text-align: center;
+  }
+
+
+  /* =========================
+     DOCTORS GRID
+  ========================= */
+
+  .map-doc1 {
+    width: 100% !important;
+
+    display: grid !important;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+    gap: 12px;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =========================
+     DOCTOR CARD
+  ========================= */
+
+  .disp-doc {
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 0 10px !important;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+
+    box-sizing: border-box;
+  }
+
+
+  /* =========================
+     DOCTOR IMAGE
+  ========================= */
+
+  .top-doc-img {
+    width: 100% !important;
+    height: 150px !important;
+
+    display: block;
+
+    /* object-fit: cover; */
+
+    margin: 0 !important;
+  }
+
+
+  /* =========================
+     AVAILABILITY
+  ========================= */
+
+  .top-doc-desp {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 8px 9px 2px;
+
+    box-sizing: border-box;
+  }
+
+  .dot,
+  .dotu {
+    width: 7px;
+    height: 7px;
+
+    min-width: 7px;
+
+    margin: 0 !important;
+
+    border-radius: 50%;
+  }
+
+  .tetu,
+  .tetu2 {
+    margin: 0 !important;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     DOCTOR TEXT
+  ========================= */
+
+  .para {
+    width: auto;
+
+    margin: 4px 9px !important;
+
+    font-size: 12px;
+
+    line-height: 1.3;
+
+    text-align: left;
+  }
+
+  .para1 {
+    margin-top: 6px !important;
+
+    font-size: 14px;
+  }
+}
+
+
+/* ================================
+   VERY SMALL PHONES
+================================ */
+
+@media (max-width: 380px) {
+
+  .doc-appo {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .map-doc1 {
+    gap: 9px;
+  }
+
+  .top-doc-img {
+    height: 130px !important;
+  }
+
+  .para {
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+
+    font-size: 11px;
+  }
+
+  .para1 {
+    font-size: 13px;
+  }
+
+  .tetu,
+  .tetu2 {
+    font-size: 9px;
+  }
+}
