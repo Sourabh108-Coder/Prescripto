@@ -4203,3 +4203,384 @@ html {
     font-size: 12px;
   }
 }
+
+
+/* MY Appointments responsiveness */
+/* =====================================================
+   MY APPOINTMENTS - MOBILE RESPONSIVE CSS
+   Add this AFTER your existing CSS
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* Main page */
+  .appointments {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px 14px 40px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Heading */
+  .appo-head {
+    font-size: 23px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    padding: 0;
+  }
+
+  /* =========================================
+     APPOINTMENT CARD
+  ========================================= */
+
+  .actual {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+
+    box-sizing: border-box;
+
+    padding: 16px;
+    margin: 0 0 18px;
+
+    gap: 0;
+
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+
+  /* =========================================
+     DOCTOR IMAGE
+  ========================================= */
+
+  .actual > div:first-child {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+
+    box-sizing: border-box;
+  }
+
+  .img-src {
+    width: 100px;
+    height: 100px;
+
+    max-width: 100px;
+    max-height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+  }
+
+
+  /* =========================================
+     DOCTOR INFORMATION
+  ========================================= */
+
+  .appo-info {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    flex: none !important;
+
+    box-sizing: border-box;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  .appo-info h2 {
+    width: 100%;
+
+    font-size: 19px;
+    line-height: 1.3;
+
+    margin: 0 0 5px;
+
+    color: #222;
+
+    word-break: break-word;
+  }
+
+  .appo-info p {
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    margin: 4px 0;
+
+    color: #666;
+
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  /* Speciality */
+  .appo-info p:nth-child(2) {
+    color: #5f6fff;
+    font-weight: 500;
+
+    margin-bottom: 13px;
+  }
+
+  /* Address heading */
+  .appo-info p:nth-child(3) {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+
+  /* Address lines */
+  .appo-info p:nth-child(4),
+  .appo-info p:nth-child(5) {
+    color: #777;
+    font-size: 12.5px;
+  }
+
+  /* Date & Time */
+  .appo-info p:last-child {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 13px 0 16px;
+    padding: 10px 6px;
+
+    background: #f5f6ff;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    word-break: break-word;
+  }
+
+
+  /* =========================================
+     BUTTON AREA
+     THIS FIXES THE RIGHT-SIDE CUT OFF
+  ========================================= */
+
+  .all-but {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: auto !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+
+    flex: none !important;
+
+    position: static !important;
+
+    box-sizing: border-box;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    gap: 9px;
+
+    overflow: visible !important;
+  }
+
+
+  /* =========================================
+     BUTTONS
+  ========================================= */
+
+  .all-but button {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    height: 44px;
+
+    box-sizing: border-box;
+
+    margin: 0 !important;
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    white-space: normal;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+  }
+
+  .styled-button2,
+  .styled-button3 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE - 480px
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .appointments {
+    padding: 18px 11px 35px;
+  }
+
+  .appo-head {
+    font-size: 21px;
+    margin-bottom: 17px;
+  }
+
+  .actual {
+    padding: 14px;
+    margin-bottom: 15px;
+
+    border-radius: 15px;
+  }
+
+  /* Image */
+  .actual > div:first-child {
+    margin-bottom: 12px !important;
+  }
+
+  .img-src {
+    width: 88px;
+    height: 88px;
+
+    max-width: 88px;
+    max-height: 88px;
+  }
+
+  /* Doctor info */
+  .appo-info h2 {
+    font-size: 18px;
+  }
+
+  .appo-info p {
+    font-size: 12px;
+  }
+
+  .appo-info p:nth-child(2) {
+    margin-bottom: 11px;
+  }
+
+  .appo-info p:nth-child(4),
+  .appo-info p:nth-child(5) {
+    font-size: 11.5px;
+  }
+
+  /* Date/time */
+  .appo-info p:last-child {
+    font-size: 11.5px;
+    padding: 9px 5px;
+    margin: 11px 0 14px;
+  }
+
+  /* Buttons */
+  .all-but {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    gap: 8px;
+  }
+
+  .all-but button,
+  .styled-button2,
+  .styled-button3 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    height: 42px;
+
+    font-size: 12px;
+
+    padding: 9px 8px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE - 360px
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .appointments {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .actual {
+    padding: 12px;
+  }
+
+  .appo-head {
+    font-size: 20px;
+  }
+
+  .img-src {
+    width: 80px;
+    height: 80px;
+
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .appo-info h2 {
+    font-size: 17px;
+  }
+
+  .appo-info p {
+    font-size: 11.5px;
+  }
+
+  .appo-info p:last-child {
+    font-size: 11px;
+  }
+
+  .all-but button,
+  .styled-button2,
+  .styled-button3 {
+    height: 40px;
+    font-size: 11.5px;
+  }
+}
