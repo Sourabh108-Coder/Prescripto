@@ -4307,6 +4307,8 @@ html {
 
     text-align: center;
 
+    border: none !important;
+
     overflow: hidden;
   }
 
@@ -4366,10 +4368,11 @@ html {
 
     margin: 13px 0 16px;
     padding: 10px 6px;
-
+   
     background: #f5f6ff;
 
     border-radius: 8px;
+    border: 2px solid red;
 
     font-size: 12px;
 
