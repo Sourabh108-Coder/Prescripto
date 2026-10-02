@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa6'
 
 const Footer = () => {
   return (
@@ -11,37 +12,71 @@ const Footer = () => {
             className='logo'
             alt='Prescripto Logo'
           />
+
           <h1 className='head-heading1'>Prescripto</h1>
         </div>
 
-        <p>
+        <p className='left-fot-para'>
           Prescripto makes healthcare simple and accessible. Book appointments
-          with trusted doctors, manage your consultations, and get the care
-          you need from the comfort of your home.
+          with trusted doctors, manage your consultations, and get the care you
+          need from the comfort of your home.
         </p>
+
+        <div className='social-icons'>
+
+            <a
+              href='https://github.com/Sourabh108-Coder'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='GitHub'
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href='https://www.linkedin.com/in/sourabh-kumar-407079267'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='LinkedIn'
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href='https://thesourabh.pythonanywhere.com/'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='Portfolio'
+            >
+              <FaGlobe />
+            </a>
+        </div>
       </div>
+
 
       <div className='fo-li'>
 
-         <div className='center-side-footer'>
-           <p className='foot-para'><b>Company</b></p>
+        <div className='center-side-footer'>
+          <p className='foot-para'><b>Company</b></p>
 
-           <ul className='footer-list'>
-             <li>Home</li>
-             <li>About Us</li>
-             <li>Contact Us</li>
-             <li>Privacy Policy</li>
-           </ul>
-         </div>
+          <ul className='footer-list'>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
 
-         <div className='right-side-footer'>
-           <p className='foot-para'><b>Get In Touch</b></p>
 
-           <ul className='footer-list'>
-             <li>+1-212-456-7890</li>
-             <li>Prescripto2310@gmail.com</li>
-           </ul>
-         </div>
+        <div className='right-side-footer'>
+          <p className='foot-para'><b>Get In Touch</b></p>
+
+          <ul className='footer-list'>
+            <li>+1-212-456-7890</li>
+            <li>Prescripto2310@gmail.com</li>
+          </ul>
+
+        </div>
 
       </div>
 
