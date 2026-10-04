@@ -621,6 +621,12 @@ html {
   text-decoration: none;
 
   transition: all 0.3s ease;
+  border:2px solid #2563eb;
+}
+
+a{
+  text-decoration:none;
+  color:black;
 }
 
 .social-icons a:hover {

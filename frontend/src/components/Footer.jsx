@@ -60,10 +60,10 @@ const Footer = () => {
           <p className='foot-para'><b>Company</b></p>
 
           <ul className='footer-list'>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Privacy Policy</li>
+            <a href = '/'><li>Home</li></a>
+            <a href = '/about'><li>About Us</li></a>
+            <a href = '/contact'><li>Contact Us</li></a>
+            <a href = '/doctors'><li>Doctors</li></a>
           </ul>
         </div>
 
