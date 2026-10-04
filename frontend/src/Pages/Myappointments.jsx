@@ -139,6 +139,12 @@ const Myappointments = () => {
     {
       getuserappointments();
     }
+    else
+    {
+       navigate('/login');
+       toast.info("Please Login to Access More!");
+       return;
+    }
   },[token])
 
   return (

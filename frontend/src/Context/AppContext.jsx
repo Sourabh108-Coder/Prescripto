@@ -53,7 +53,7 @@ const AppContextProvider=(props)=>
 
             if(res.data.success)
             {
-                toast.success("Fetched Successfully");
+                // toast.success("Fetched Successfully");
                 setdoctors(res.data.data);
                 console.log("oye moye" + JSON.stringify(res.data.data));
             }

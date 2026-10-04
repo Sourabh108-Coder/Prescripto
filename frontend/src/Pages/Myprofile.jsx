@@ -1,9 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { AppContext } from '../Context/AppContext';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Myprofile = () => {
+
+  const navigate = useNavigate();
 
   /*const[userdata,setuserdata]=useState({
     name:"Edward Vincent",
@@ -63,6 +66,15 @@ const Myprofile = () => {
       console.log("Updating  "+error.message);
     }
   }
+
+  useEffect(()=>{
+    if(!token)
+    {
+      navigate('/login');
+      toast.info("Please Login to Access More!");
+      return;
+    }
+  },[])
 
   return userdata &&(
    
