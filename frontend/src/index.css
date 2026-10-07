@@ -4743,3 +4743,596 @@ a{
     font-size: 22px;    
   }
 }
+
+
+
+/* Profile page responsiveness*/
+
+@media screen and (max-width: 768px) {
+
+  /* Main profile container */
+  .profile-container {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    padding: 25px 16px 35px;
+    margin: 0;
+
+    background: #f5f8fc;
+  }
+
+
+  /* =====================================================
+     PROFILE / IMAGE SECTION
+     ===================================================== */
+
+  .col {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+    padding: 20px 15px 25px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.08);
+  }
+
+  .profile-img {
+    width: 125px;
+    height: 125px;
+
+    margin-left: 0;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 4px solid #ffffff;
+
+    box-shadow:
+      0 5px 20px rgba(0, 123, 255, 0.20),
+      0 0 0 3px rgba(0, 123, 255, 0.08);
+
+    transition: 0.3s ease;
+  }
+
+  .profile-img:active {
+    transform: scale(0.97);
+  }
+
+
+  /* User name */
+  .user-name {
+    margin: 15px 0 0;
+
+    color: #007BFF;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    word-break: break-word;
+  }
+
+
+  /* Name input while editing */
+  .input-field1 {
+    width: 100%;
+    max-width: 350px;
+
+    box-sizing: border-box;
+
+    margin: 15px 0 0;
+
+    padding: 12px 14px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 16px;
+
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    transition: 0.3s ease;
+  }
+
+  .input-field1:focus {
+    border-color: #4CAF50;
+
+    box-shadow:
+      0 0 0 3px rgba(0, 123, 255, 0.10);
+  }
+
+
+  /* Divider */
+  .hi {
+    width: 80%;
+    height: 1px;
+
+    margin: 20px auto 0;
+
+    background: #e5e7eb;
+  }
+
+
+  /* =====================================================
+     RIGHT SIDE INFORMATION
+     ===================================================== */
+
+  .du-ba {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-top: 20px;
+  }
+
+
+  /* Information cards */
+  .all-info {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 20px 17px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    border: 1px solid #e9eef5;
+
+    box-shadow:
+      0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+
+  /* Section heading */
+  .all-info h3 {
+    margin: 0 0 18px;
+
+    color: #007BFF;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 17px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .all-info > b {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #007BFF;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 17px;
+  }
+
+
+  /* =====================================================
+     CONTACT GRID
+     ===================================================== */
+
+  .gridy {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    row-gap: 14px;
+
+    box-sizing: border-box;
+  }
+
+  .gridy p {
+    margin: 0;
+
+    min-width: 0;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    word-break: break-word;
+  }
+
+  .gridy p b {
+    color: #222;
+  }
+
+
+  /* =====================================================
+     ADDRESS INPUTS
+     ===================================================== */
+
+  .input-field2 {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px 11px;
+
+    margin-top: 2px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    border: 2px solid #007BFF;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #fff;
+
+    transition: 0.3s ease;
+  }
+
+  .input-field2:focus {
+    border-color: #4CAF50;
+
+    box-shadow:
+      0 0 0 3px rgba(76, 175, 80, 0.10);
+  }
+
+
+  /* =====================================================
+     PHONE INPUT
+     ===================================================== */
+
+  .input-field3 {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 40px;
+
+    box-sizing: border-box;
+
+    margin-top: 0;
+
+    padding: 9px 11px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    border: 2px solid #007BFF;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+  }
+
+  .input-field3:focus {
+    border-color: #4CAF50;
+
+    box-shadow:
+      0 0 0 3px rgba(76, 175, 80, 0.10);
+  }
+
+
+  /* =====================================================
+     BASIC INFORMATION
+     ===================================================== */
+
+  .base {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 90px minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    row-gap: 14px;
+
+    margin-top: 0;
+
+    box-sizing: border-box;
+  }
+
+  .base p {
+    margin: 0;
+
+    min-width: 0;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #555;
+
+    word-break: break-word;
+  }
+
+  .base p b {
+    color: #222;
+  }
+
+
+  /* =====================================================
+     DATE INPUT
+     ===================================================== */
+
+  .input-field4 {
+    width: 100%;
+
+    height: 40px;
+
+    box-sizing: border-box;
+
+    margin-top: 0;
+
+    padding: 7px 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    border: 2px solid #007BFF;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+  }
+
+  .input-field4:focus {
+    border-color: #4CAF50;
+
+    box-shadow:
+      0 0 0 3px rgba(76, 175, 80, 0.10);
+  }
+
+
+  /* =====================================================
+     SELECT
+     ===================================================== */
+
+  .styled-select {
+    width: 100%;
+
+    height: 40px;
+
+    box-sizing: border-box;
+
+    margin-top: 0;
+
+    padding: 5px 10px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-size: 14px;
+
+    border: 2px solid #007BFF;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #333;
+
+    cursor: pointer;
+  }
+
+  .styled-select:focus {
+    border-color: #4CAF50;
+
+    box-shadow:
+      0 0 0 3px rgba(76, 175, 80, 0.10);
+  }
+
+
+  /* =====================================================
+     SAVE BUTTON
+     ===================================================== */
+
+  .styled-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 13px 20px;
+
+    font-size: 16px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+    font-weight: 600;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+      135deg,
+      #007BFF,
+      #0056d6
+    );
+
+    border: none;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    box-shadow:
+      0 6px 15px rgba(0, 123, 255, 0.25);
+
+    transition: all 0.25s ease;
+  }
+
+  .styled-button:hover {
+    background: linear-gradient(
+      135deg,
+      #006fe6,
+      #004fc4
+    );
+
+    transform: none;
+  }
+
+  .styled-button:active {
+    transform: scale(0.98);
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  .profile-container {
+    padding: 15px 10px 30px;
+  }
+
+  .col {
+    padding: 18px 12px 22px;
+
+    border-radius: 18px;
+  }
+
+  .profile-img {
+    width: 105px;
+    height: 105px;
+  }
+
+  .user-name {
+    font-size: 22px;
+  }
+
+  .all-info {
+    padding: 17px 13px;
+
+    border-radius: 14px;
+  }
+
+  .all-info h3,
+  .all-info > b {
+    font-size: 16px;
+  }
+
+  .gridy,
+  .base {
+    grid-template-columns: 82px minmax(0, 1fr);
+
+    column-gap: 9px;
+
+    row-gap: 12px;
+  }
+
+  .gridy p,
+  .base p {
+    font-size: 13px;
+  }
+
+  .input-field2,
+  .input-field3,
+  .input-field4,
+  .styled-select {
+    font-size: 13px;
+  }
+
+  .styled-button {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media screen and (max-width: 360px) {
+
+  .profile-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .styled-button1
+  {
+    margin:auto;
+    width:100%;
+  }
+
+  .profile-img {
+    width: 95px;
+    height: 95px;
+  }
+
+  .user-name {
+    font-size: 20px;
+  }
+
+  .all-info {
+    padding: 15px 11px;
+  }
+
+  .gridy,
+  .base {
+    grid-template-columns: 75px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+
+  .gridy p,
+  .base p {
+    font-size: 12px;
+  }
+
+  .input-field2,
+  .input-field3,
+  .input-field4,
+  .styled-select {
+    font-size: 12px;
+  }
+
+}
+
