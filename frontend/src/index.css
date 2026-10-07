@@ -1269,7 +1269,7 @@ a{
 .profile-container
 {
   width:85vw;
-  /* margin: auto; */
+  margin: auto;
   display: flex;
   /* flex-direction: column; */
   /* justify-content: space-around; */
