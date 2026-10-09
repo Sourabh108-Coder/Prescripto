@@ -35,7 +35,8 @@ code {
   max-width: 400px;
   transition: all 0.3s ease;
   font-family: 'Times New Roman', Times, serif;
-  margin-top: 3rem;
+  margin-top: 7rem;
+  border:2px solid red;
 }
 
 /* Hover effect on card */
@@ -62,7 +63,7 @@ code {
 
 
 .input-field {
-  width: 80%;
+  width: 90%;
   padding: 12px;
   font-size: 1rem;
   border-radius: 8px;
@@ -79,7 +80,7 @@ code {
 
 /* Submit Button */
 .submit-btn {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   font-size: 1rem;
   color: #fff;
@@ -88,7 +89,7 @@ code {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left:4rem;
+  /* margin-left:4rem; */
   margin-top: 1rem;
 }
 
@@ -106,6 +107,7 @@ code {
 {
   margin-top: 1rem;
   margin-left: 4.5rem;
+  font-size:1.2rem;
 }
 
 
@@ -1049,7 +1051,7 @@ h4 {
 @media screen and (max-width: 768px) {
     .login-cont {
         width:95vw;
-        margin-top:7rem;
+        margin-top:3rem;
     }
 
     .login-card {
