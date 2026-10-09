@@ -1154,3 +1154,118 @@ h4 {
     }
 }
 
+
+/* Navbar responsiveness */
+
+@media screen and (max-width: 768px) {
+    .Nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        gap: 12px;
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+        margin-top:1rem;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .head-heading1 {
+        font-size: 25px;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .ad-doce {
+        font-size: 12px;
+        margin-top: 1rem;
+        border-radius: 20px;
+        background: #e8edff;
+        color: #4f5fe8;
+        white-space: nowrap;
+    }
+
+    .nav-but {
+        padding: 10px 20px;
+        font-size: 11px;
+        border: none;
+        border-radius: 5px;
+        white-space: nowrap;
+        cursor: pointer;
+        flex-shrink: 0;
+        margin-top:1rem;
+    }
+}
+
+/* Small Mobile Screens */
+@media screen and (max-width: 480px) {
+    .Nav-bar {
+        padding: 12px 12px;
+        gap: 8px;
+    }
+
+    .head {
+        gap: 6px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .head-heading1 {
+        font-size:25px;
+    }
+
+    .ad-doce {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
+
+    .nav-but {
+       padding: 10px 20px;
+        font-size: 11px;
+    }
+}
+
+/* Extra Small Mobile Screens */
+@media screen and (max-width: 360px) {
+    .Nav-bar {
+        padding: 10px 8px;
+        gap: 6px;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .head-heading1 {
+        font-size: 25px;
+    }
+
+    .ad-doce {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .nav-but {
+        padding: 10px 20px;
+        font-size: 11px;
+    }
+}
