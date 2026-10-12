@@ -1,70 +1,82 @@
-import React, { useContext } from 'react'
-import { Admincontext } from '../Context/Admincontext'
-import { NavLink } from 'react-router-dom';
-import { MdLeaderboard } from "react-icons/md";
-import { MdPointOfSale } from "react-icons/md";
-import { MdAddModerator } from "react-icons/md";
-import { FaListCheck } from "react-icons/fa6";
-import { Doctorcontext } from '../Context/Doctorcontext';
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
+
+import { Admincontext } from "../Context/Admincontext";
+import { Doctorcontext } from "../Context/Doctorcontext";
+
+import {
+  MdLeaderboard,
+  MdPointOfSale,
+  MdAddModerator,
+} from "react-icons/md";
+
+import {
+  FaListCheck,
+  FaHeartPulse,
+} from "react-icons/fa6";
+
 import { FaPeriscope } from "react-icons/fa";
+import { FiChevronRight } from "react-icons/fi";
+
 
 const Sidebar = () => {
+  const { adtoken } = useContext(Admincontext);
+  const { doctoken } = useContext(Doctorcontext);
 
-    const{adtoken}=useContext(Admincontext);
+  const adminLinks = [
+    { to: "/admin-dashboard", label: "Dashboard", icon: <MdLeaderboard /> },
+    { to: "/all-appointments", label: "Appointments", icon: <MdPointOfSale /> },
+    { to: "/add-doctor", label: "Add Doctor", icon: <MdAddModerator /> },
+    { to: "/doctor-list", label: "Doctor List", icon: <FaListCheck /> },
+  ];
 
-    const{doctoken}=useContext(Doctorcontext);
+  const doctorLinks = [
+    { to: "/doctor-dashboard", label: "Dashboard", icon: <MdLeaderboard /> },
+    { to: "/doctor-appointments", label: "Appointments", icon: <MdPointOfSale /> },
+    { to: "/doctor-profile", label: "My Profile", icon: <FaPeriscope /> },
+  ];
+
+  const links = adtoken ? adminLinks : doctoken ? doctorLinks : [];
+
+  if (!links.length) return null;
 
   return (
-    <div className='side-bar'>
-      {
-        adtoken && 
-        <ul className="sidebar-list">
-            <NavLink to={"/admin-dashboard"} className="sidebar-item">
-                <div className="sidebar-icon">{<MdLeaderboard />}</div>
-                <p>Dashboard</p>
-            </NavLink>
+    <aside className="side-bar">
+      <div className="sidebar-brand">
+        <div className="sidebar-logo">
+          <FaHeartPulse />
+        </div>
 
-            <NavLink to={"/all-appointments"} className="sidebar-item">
-                <div className="sidebar-icon">{<MdPointOfSale />}</div>
-                <p>Appointments</p>
-            </NavLink>
+        <div className="sidebar-brand-text">
+          <h2>{adtoken ? "Admin Panel" : "Doctor Panel"}</h2>
+        </div>
+      </div>
 
-            <NavLink to={"/add-doctor"} className="sidebar-item">
-                <div className="sidebar-icon">{<MdAddModerator/>}</div>
-                <p>Add-Doctor</p>
-            </NavLink>
+      <div className="sidebar-section-label">MAIN MENU</div>
 
-            <NavLink to={"/doctor-list"} className="sidebar-item">
-                <div className="sidebar-icon">{<FaListCheck/>}</div>
-                <p>Doctor-List</p>
-            </NavLink>
-        </ul>
-      }
+      <nav className="sidebar-list" aria-label="Main navigation">
+        {links.map(({ to, label, icon }) => (
+          <NavLink
+            key={to}
+            to={to}
+            end
+            className={({ isActive }) =>
+              `sidebar-item${isActive ? " active" : ""}`
+            }
+          >
+            <span className="sidebar-icon">{icon}</span>
+            <span className="sidebar-item-text">{label}</span>
+            <FiChevronRight className="sidebar-arrow" />
+          </NavLink>
+        ))}
+      </nav>
 
-      {/* ************************************************************************** */}
+      <div className="sidebar-footer">
+        <span className="sidebar-status-dot" />
+        <span>{adtoken ? "Administrator" : "Healthcare Professional"}</span>
+      </div>
+    </aside>
+  );
+};
 
-      {
-        doctoken && 
-        <ul className="sidebar-list">
-            <NavLink to={"/doctor-dashboard"} className="sidebar-item">
-                <div className="sidebar-icon">{<MdLeaderboard />}</div>
-                <p>Dashboard</p>
-            </NavLink>
-
-            <NavLink to={"/doctor-appointments"} className="sidebar-item">
-                <div className="sidebar-icon">{<MdPointOfSale />}</div>
-                <p>Appointments</p>
-            </NavLink>
-
-            <NavLink to={"/doctor-profile"} className="sidebar-item">
-                <div className="sidebar-icon">{<FaPeriscope/>}</div>
-                <p>Doctor-Profile</p>
-            </NavLink>
-        </ul>
-      }
-
-    </div>
-  )
-}
-
-export default Sidebar
+export default Sidebar;
