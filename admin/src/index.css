@@ -216,7 +216,7 @@ code {
 
   width: 260px;
   min-width: 260px;
-  min-height: calc(100vh - 40px);
+  /* min-height: calc(100vh - 40px); */
   align-self: flex-start;
 
   display: flex;
@@ -969,18 +969,6 @@ h4 {
 }
 
 
-
-.doc-fet2
-{
-  border:3px solid #4f5697;
-  margin-top: 1.2rem;
-  width:80%;
-  padding:5px;
-  overflow-y: scroll;
-  height: 70.5vh;
-  scrollbar-width: none;
-}
-
 .can-ico
 {
   width:27px;
@@ -994,6 +982,19 @@ h4 {
   color:red;
 }
 
+
+/* Dashboard page css start */
+
+.doc-fet2
+{
+  border:3px solid #4f5697;
+  margin-top: 1.2rem;
+  width:80%;
+  padding:5px;
+  overflow-y: scroll;
+  height: 70.5vh;
+  scrollbar-width: none;
+}
 
 .cano5
 {
@@ -1051,6 +1052,60 @@ h4 {
   color: #777;  /* Subtle color for the second line */
 }
 
+.cano2 {
+  color: #d9534f;  /* Red color for canceled text */
+  font-weight: bold;
+}
+
+/* Container for the text information */
+.info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;  /* Push cancel icon to the right */
+}
+
+.info2 h4 {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.table-cell2 {
+  margin-left: auto;  /* Push cancel section to the right */
+}
+
+
+.can-ico2 {
+  font-size: 1.5rem;
+  color: #f44336;  /* Red color for cancel icon */
+  cursor: pointer;  /* Pointer cursor to indicate it's clickable */
+  transition: transform 0.3s ease;  /* Icon hover effect */
+}
+
+.can-ico2:hover {
+  transform: scale(1.1);  /* Slight zoom-in effect on icon hover */
+}
+
+.headingjii
+{
+  display: flex;
+  /* gap:5px; */
+  align-items: center;
+
+}
+
+.list-ico
+{
+  color:#4f5697;
+  width:30px;
+  height:30px;
+
+}
+
+
+
+/* Dashborad page css ends */
 
 /* **************************************************** */
 
@@ -1087,57 +1142,9 @@ h4 {
   transform: scale(1.1);  /* Slight zoom-in effect on image hover */
 }
 
-/* Container for the text information */
-.info2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: auto;  /* Push cancel icon to the right */
-}
 
-.info2 h4 {
-  margin: 5px 0;
-  font-size: 1rem;
-  color: #333;
-}
 
 /* Styling for the cancel section */
-.table-cell2 {
-  margin-left: auto;  /* Push cancel section to the right */
-}
-
-.cano2 {
-  color: #d9534f;  /* Red color for canceled text */
-  font-weight: bold;
-}
-
-.can-ico2 {
-  font-size: 1.5rem;
-  color: #f44336;  /* Red color for cancel icon */
-  cursor: pointer;  /* Pointer cursor to indicate it's clickable */
-  transition: transform 0.3s ease;  /* Icon hover effect */
-}
-
-.can-ico2:hover {
-  transform: scale(1.1);  /* Slight zoom-in effect on icon hover */
-}
-
-.headingjii
-{
-  display: flex;
-  /* gap:5px; */
-  align-items: center;
-
-}
-
-.list-ico
-{
-  color:#4f5697;
-  width:30px;
-  height:30px;
-
-}
-
 
 .can-ico1
 {
