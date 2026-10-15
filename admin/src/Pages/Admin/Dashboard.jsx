@@ -62,7 +62,7 @@ const Dashboard = () => {
           {
             dashdata.latestappointments.map((item,index)=>(
               <div key={index} className='appointment-card'>
-                <img src={item.docdata.image}/>
+                <img src={item.docdata.image} className="appointment-card-img"/ >
 
                 <div className='info2'>
                   <h4>{item.docdata.name}</h4>

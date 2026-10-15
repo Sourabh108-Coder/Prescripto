@@ -126,6 +126,7 @@ code {
 {
   width:90vw;
   margin: auto;
+
   
 }
 
@@ -217,7 +218,7 @@ code {
   width: 260px;
   min-width: 260px;
   align-self: flex-start;
-
+  height:100vh;
   display: flex;
   flex-direction: column;
   padding: 24px 16px 16px;
@@ -468,8 +469,8 @@ code {
     border-radius: 0;
 
     box-shadow: 4px 0 20px rgba(15, 23, 42, 0.035);
-    overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-y: auto; */
+    /* overflow-x: hidden; */
   }
 
   /* Compact logo */
@@ -634,8 +635,7 @@ code {
   /* min-height:100%; */
   height:75vh;
   position: relative;;
-  width:90vw;
-  overflow-y: scroll;
+  width:95vw;
   scrollbar-width: none;
   
 }
@@ -983,13 +983,14 @@ h4 {
 
 .doc-fet2
 {
-  border:3px solid #4f5697;
+  /* border:3px solid #4f5697; */
   margin-top: 1.2rem;
-  width:80%;
+  width:100vw;
   padding:5px;
-  overflow-y: scroll;
-  height: 70.5vh;
-  scrollbar-width: none;
+  /* overflow-y: scroll; */
+  /* height: 90.5vh; */
+  /* scrollbar-width: none; */
+  margin:auto;
 }
 
 .cano5
@@ -1001,9 +1002,12 @@ h4 {
 .container {
   display: flex;  /* Align items in a row */
   justify-content: space-between;  /* Space boxes evenly across the row */
+  margin:auto;
   gap: 20px;  /* Space between the boxes */
   padding: 20px;
   flex-wrap: nowrap;  /* Ensure boxes remain in a single row */
+
+  width:100%;
  
 }
 
@@ -1019,7 +1023,7 @@ h4 {
   align-items: center;  /* Center content horizontally */
   justify-content: center;  /* Center content vertically */
   transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth transitions */
-  border:2px solid #007BFF;
+  border:3px solid #007BFF;
 }
 
 .box:hover {
@@ -1028,8 +1032,8 @@ h4 {
 }
 
 .icon {
-  font-size: 3rem;  /* Larger icon */
-  color: #4CAF50;  /* Icon color */
+  font-size: 5rem;  /* Larger icon */
+  color: #4CAF50; 
 }
 
 .info {
@@ -1038,19 +1042,25 @@ h4 {
 
 .info h4 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #333;
 }
 
 .info h5 {
   margin: 5px 0 0;
-  color: #777;  /* Subtle color for the second line */
+  color: #dd1212;  /* Subtle color for the second line */
 }
 
 .cano2 {
   color: #d9534f;  /* Red color for canceled text */
   font-weight: bold;
+}
+
+.appointment-card-img
+{
+  border:2px solid green;
+  padding:6px;
 }
 
 /* Container for the text information */
@@ -1069,6 +1079,9 @@ h4 {
 
 .table-cell2 {
   margin-left: auto;  /* Push cancel section to the right */
+  border: 2px solid rgb(67, 71, 67);
+  border-radius:5rem;
+  padding:3px 10px;
 }
 
 
