@@ -216,18 +216,14 @@ code {
 
   width: 260px;
   min-width: 260px;
-  /* min-height: calc(100vh - 40px); */
   align-self: flex-start;
 
   display: flex;
   flex-direction: column;
-
-  /* margin: 20px 0 20px 24px; */
   padding: 24px 16px 16px;
 
   background: #ffffff;
   border: 1px solid #e8edf5;
-  /* border-radius: 20px; */
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.045);
 
   font-family: Inter, "Segoe UI", Arial, sans-serif;
