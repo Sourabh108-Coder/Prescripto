@@ -908,43 +908,619 @@ code {
   color: #333;
 }
 
-.all-doc
-{
-  margin-left: 3rem;
-  color: #4f5697;
+
+/* All Appt css */
+
+/* =====================================
+   ALL APPOINTMENTS PAGE
+===================================== */
+
+.all-appointments-page {
+  width: 100vw;
+  /* min-width: 0; */
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  /* background: #f8fafc; */
+  color: #1e293b;
+  /* border:2px solid black; */
+  /* overflow-x: hidden; */
+  margin:auto;
 }
 
-.appo-data {
-  width: 60vw;
-  margin: 0 auto; /* Center the table horizontally */
-  border-collapse: collapse; /* Make sure the table cells are tightly packed */
-  text-align: center; /* Center the text inside cells */
-  font-family: 'Times New Roman', Times, serif;
+/* Page heading */
+
+.all-appointments-page .appointments-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
 }
 
-.table-header {
+.all-appointments-page .appointments-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 28px;
+}
+
+.all-appointments-page .appointments-title .all-doc {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.all-appointments-page .appointments-title p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Main panel */
+
+.all-appointments-page .appointments-panel {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 5px 24px rgba(15, 23, 42, 0.04);
+}
+
+.all-appointments-page .appointments-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 24px;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.all-appointments-page .appointments-panel-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.all-appointments-page .appointments-panel-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.all-appointments-page .appointments-count {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  background: #f0f9ff;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Desktop table */
+
+.all-appointments-page .appo-data {
+  width: 100%;
+  min-width: 0;
+}
+
+.all-appointments-page .table-header,
+.all-appointments-page .table-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  background-color: #f2f2f2; /* Light background color for the header */
-  padding: 10px;
-  font-weight: bold;
+  grid-template-columns:
+    0.45fr
+    1.25fr
+    1.7fr
+    1.35fr
+    1.25fr
+    0.65fr
+    1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 0 22px;
 }
 
-.table-row {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Same 7 equal columns as header */
-  border-top: 1px solid #ddd; /* Add a border between rows */
-  padding: 10px;
+.all-appointments-page .table-header {
+  min-height: 55px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.table-cell {
-  padding: 8px;
-  border-right: 1px solid #ddd; /* Add a border between columns */
+.all-appointments-page .table-header .table-cell {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
 }
 
-.table-cell:last-child {
-  border-right: none; /* Remove the border from the last cell */
+.all-appointments-page .table-row {
+  min-height: 83px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
 }
+
+.all-appointments-page .table-row:last-child {
+  border-bottom: none;
+}
+
+.all-appointments-page .table-row:hover {
+  background: #f8fbff;
+}
+
+.all-appointments-page .table-cell {
+  min-width: 0;
+  color: #475569;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.all-appointments-page .table-cell h4 {
+  margin: 0;
+  font-size: inherit;
+}
+
+.all-appointments-page .appointment-number {
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Patient details */
+
+.all-appointments-page .patient-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.all-appointments-page .patient-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 11px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.all-appointments-page .patient-name {
+  color: #1e293b;
+  font-size: 12px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.all-appointments-page .email-cell {
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.all-appointments-page .date-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.all-appointments-page .appointment-time {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.all-appointments-page .doctor-cell {
+  color: #334155;
+  font-weight: 600;
+}
+
+.all-appointments-page .fees-cell {
+  color: #0f766e;
+  font-weight: 750;
+}
+
+/* Appointment statuses */
+
+.all-appointments-page .appointment-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 7px 9px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.all-appointments-page .status-dot {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.all-appointments-page .status-cancelled {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.all-appointments-page .status-completed {
+  color: #15803d;
+  background: #f0fdf4;
+}
+
+/* Cancel action button */
+
+.all-appointments-page .cancel-appointment-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  min-height: 35px;
+  padding: 7px 10px;
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+  background: #fff7f7;
+  color: #dc2626;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.all-appointments-page .cancel-appointment-btn svg {
+  flex-shrink: 0;
+  font-size: 17px;
+}
+
+.all-appointments-page .cancel-appointment-btn:hover {
+  border-color: #dc2626;
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.all-appointments-page .cancel-appointment-btn:focus-visible {
+  outline: 3px solid #fecaca;
+  outline-offset: 3px;
+}
+
+/* Empty state */
+
+.all-appointments-page .appointments-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 230px;
+  padding: 25px;
+  text-align: center;
+}
+
+.all-appointments-page .appointments-empty svg {
+  color: #94a3b8;
+  font-size: 42px;
+}
+
+.all-appointments-page .appointments-empty h3 {
+  margin: 0;
+  color: #334155;
+  font-size: 17px;
+}
+
+.all-appointments-page .appointments-empty p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+  .all-appointments-page {
+    padding: 20px;
+  }
+
+  .all-appointments-page .table-header,
+  .all-appointments-page .table-row {
+    grid-template-columns:
+      30px
+      1.1fr
+      1.35fr
+      1.15fr
+      1fr
+      0.55fr
+      0.85fr;
+    gap: 10px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .all-appointments-page .table-cell {
+    font-size: 11px;
+  }
+
+  .all-appointments-page .patient-info {
+    gap: 7px;
+  }
+
+  .all-appointments-page .patient-avatar {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =====================================
+   MOBILE: APPOINTMENTS BECOME CARDS
+===================================== */
+
+@media (max-width: 700px) {
+  .all-appointments-page {
+    padding: 17px 12px;
+  }
+
+  .all-appointments-page .appointments-title {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .all-appointments-page .appointments-title-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    font-size: 23px;
+  }
+
+  .all-appointments-page .appointments-title .all-doc {
+    font-size: 22px;
+  }
+
+  .all-appointments-page .appointments-title p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .all-appointments-page .appointments-panel {
+    overflow: visible;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .all-appointments-page .appointments-panel-header {
+    align-items: flex-start;
+    padding: 0 0 15px;
+    border-bottom: none;
+  }
+
+  .all-appointments-page .appointments-panel-header h2 {
+    font-size: 16px;
+  }
+
+  .all-appointments-page .appointments-panel-header p {
+    max-width: 230px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .all-appointments-page .appointments-count {
+    padding: 7px 9px;
+    font-size: 10px;
+  }
+
+  /* Hide desktop table header */
+
+  .all-appointments-page .table-header {
+    display: none;
+  }
+
+  /* Each appointment becomes its own card */
+
+  .all-appointments-page .table-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 17px 12px;
+    min-height: 0;
+    margin-bottom: 13px;
+    padding: 16px 13px;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.045);
+  }
+
+  .all-appointments-page .table-row:hover {
+    background: #ffffff;
+  }
+
+  .all-appointments-page .table-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    min-width: 0;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Field labels */
+
+  .all-appointments-page .table-row .table-cell::before {
+    content: attr(data-label);
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.55px;
+    text-transform: uppercase;
+  }
+
+  /* Hide the number label but retain the number */
+
+  .all-appointments-page .table-row .table-cell:first-child {
+    display: none;
+  }
+
+  .all-appointments-page .patient-info {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .all-appointments-page .patient-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .all-appointments-page .patient-name {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .all-appointments-page .email-cell {
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .all-appointments-page .date-cell {
+    gap: 5px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .all-appointments-page .appointment-time {
+    font-size: 11px;
+  }
+
+  .all-appointments-page .doctor-cell {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .all-appointments-page .fees-cell {
+    font-size: 13px;
+  }
+
+  /* Full-width action section */
+
+  .all-appointments-page .table-row .action-cell {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .all-appointments-page .table-row .action-cell::before {
+    font-size: 10px;
+  }
+
+  .all-appointments-page .appointment-status {
+    padding: 7px 10px;
+    font-size: 10px;
+  }
+
+  .all-appointments-page .cancel-appointment-btn {
+    min-height: 37px;
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  .all-appointments-page .appointments-empty {
+    min-height: 200px;
+    padding: 20px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    background: #ffffff;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+  .all-appointments-page {
+    padding: 14px 8px;
+  }
+
+  .all-appointments-page .appointments-title .all-doc {
+    font-size: 20px;
+  }
+
+  .all-appointments-page .appointments-title p {
+    font-size: 11px;
+  }
+
+  .all-appointments-page .appointments-panel-header {
+    gap: 8px;
+  }
+
+  .all-appointments-page .appointments-count {
+    padding: 6px 7px;
+    font-size: 9px;
+  }
+
+  .all-appointments-page .table-row {
+    gap: 15px 8px;
+    padding: 13px 10px;
+  }
+
+  .all-appointments-page .table-cell {
+    font-size: 11px;
+  }
+
+  .all-appointments-page .patient-info {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .all-appointments-page .patient-avatar {
+    width: 27px;
+    height: 27px;
+  }
+
+  .all-appointments-page .patient-name {
+    font-size: 11px;
+  }
+}
+
+
+/* All Appt css ends */
 
 h3, h4 {
   margin: 0; /* Remove default margins */

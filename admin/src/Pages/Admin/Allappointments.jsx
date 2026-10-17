@@ -1,77 +1,141 @@
+
 import React, { useContext, useEffect } from 'react'
 import { Admincontext } from '../../Context/Admincontext'
 import { MdCancel } from "react-icons/md";
+import { RiFileList3Line } from "react-icons/ri";
 
 const Allappointments = () => {
+  const {
+    adtoken,
+    appointments,
+    getallappointments,
+    cancelappointment
+  } = useContext(Admincontext);
 
-  const{adtoken,appointments,setappointments,getallappointments,cancelappointment}=useContext(Admincontext);
-
-  useEffect(()=>
-  {
-
-    if(adtoken)
-    {
+  useEffect(() => {
+    if (adtoken) {
       getallappointments();
     }
-  },[adtoken])
+  }, [adtoken]);
 
   return (
-    <div className='doc-fet2'>
-      <h1 className='all-doc'>All Appointments</h1>
+    <div className=" all-appointments-page">
 
-      {/* <div className='appo-data'>
-        <div>
-          <h3>S.No</h3>
-          <h3>Patient</h3>
-          <h3>Email</h3>
-          <h3>Date & Time</h3>
-          <h3>Doctor</h3>
-          <h3>Fees</h3>
-          <h3>Action</h3>
+      <div className="appointments-title">
+        <div className="appointments-title-icon">
+          <RiFileList3Line />
         </div>
 
-        {
-          appointments.map((item,index)=>(
-            
-            <div key={index}>
-              <h4>{index+1}</h4>
-              <h4>{item.userdata.name}</h4>
-              <h4>{item.userdata.email}</h4>
-              <h4>{item.slotdate} | {item.slottime}</h4>
-              <h4>{item.docdata.name}</h4>
-              <h4>{item.docdata.fee}</h4>
-              <h4>X</h4>
+        <div>
+          <h1 className="all-doc">All Appointments</h1>
+          <p>Manage and track all patient appointments</p>
+        </div>
+      </div>
+
+      <div className="appointments-panel">
+
+        <div className="appointments-panel-header">
+          <div>
+            <h2>Appointment Records</h2>
+            <p>View patient details and appointment status</p>
+          </div>
+
+          <div className="appointments-count">
+            {appointments.length} Appointments
+          </div>
+        </div>
+
+        <div className="appo-data">
+
+          <div className="table-header">
+            <div className="table-cell">#</div>
+            <div className="table-cell">Patient</div>
+            <div className="table-cell">Email Address</div>
+            <div className="table-cell">Date & Time</div>
+            <div className="table-cell">Doctor</div>
+            <div className="table-cell">Fees</div>
+            <div className="table-cell">Status / Action</div>
+          </div>
+
+          {appointments.map((item, index) => (
+            <div key={item._id} className="table-row">
+
+              <div className="table-cell" data-label="No.">
+                <span className="appointment-number">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+              </div>
+
+              <div className="table-cell" data-label="Patient">
+                <div className="patient-info">
+                  <div className="patient-avatar">
+                    {item.userdata.name?.charAt(0)?.toUpperCase() || 'P'}
+                  </div>
+
+                  <span className="patient-name">
+                    {item.userdata.name}
+                  </span>
+                </div>
+              </div>
+
+              <div className="table-cell email-cell" data-label="Email">
+                {item.userdata.email}
+              </div>
+
+              <div className="table-cell date-cell" data-label="Date & Time">
+                <span>{item.slotdate}</span>
+                <span className="appointment-time">
+                  {item.slottime}
+                </span>
+              </div>
+
+              <div className="table-cell doctor-cell" data-label="Doctor">
+                {item.docdata.name}
+              </div>
+
+              <div className="table-cell fees-cell" data-label="Fees">
+                <span>{item.docdata.fee}</span>
+              </div>
+
+              <div className="table-cell action-cell" data-label="Status">
+                {item.canceled ? (
+                  <span className="appointment-status status-cancelled">
+                    <span className="status-dot"></span>
+                    Cancelled
+                  </span>
+                ) : item.iscompleted ? (
+                  <span className="appointment-status status-completed">
+                    <span className="status-dot"></span>
+                    Completed
+                  </span>
+                ) : (
+                  <button
+                    type="button"
+                    className="cancel-appointment-btn"
+                    aria-label={`Cancel appointment for ${item.userdata.name}`}
+                    onClick={() => cancelappointment(item._id)}
+                  >
+                    {/* <MdCancel /> */}
+                    <span>Revoke Appointment</span>
+                  </button>
+                )}
+              </div>
+
             </div>
-          ))
-        }
-      </div> */}
+          ))}
 
+          {appointments.length === 0 && (
+            <div className="appointments-empty">
+              <RiFileList3Line />
+              <h3>No appointments found</h3>
+              <p>Appointments will appear here when they are booked.</p>
+            </div>
+          )}
 
-<div className='appo-data'>
-  <div className='table-header'>
-    <div className='table-cell'><h3>S.No</h3></div>
-    <div className='table-cell'><h3>Patient</h3></div>
-    <div className='table-cell'><h3>Email</h3></div>
-    <div className='table-cell'><h3>Date & Time</h3></div>
-    <div className='table-cell'><h3>Doctor</h3></div>
-    <div className='table-cell'><h3>Fees</h3></div>
-    <div className='table-cell'><h3>Action</h3></div>
-  </div>
-
-  {appointments.map((item, index) => (
-    <div key={index} className='table-row'>
-      <div className='table-cell'><h4>{index + 1}</h4></div>
-      <div className='table-cell'><h4>{item.userdata.name}</h4></div>
-      <div className='table-cell'><h4>{item.userdata.email}</h4></div>
-      <div className='table-cell'><h4>{item.slotdate} | {item.slottime}</h4></div>
-      <div className='table-cell'><h4>{item.docdata.name}</h4></div>
-      <div className='table-cell'><h4>{item.docdata.fee}</h4></div>
-      <div className='table-cell'>{item.canceled?<h4 className='cano'>Cancelled</h4>:item.iscompleted?<h4 className='cano5'>Completed</h4>:<MdCancel className='can-ico' onClick={()=>cancelappointment(item._id)}/>}</div>
+        </div>
+      </div>
     </div>
-  ))}
-</div>
-    </div>
-  )
-}
+  );
+};
 
-export default Allappointments
+export default Allappointments;
