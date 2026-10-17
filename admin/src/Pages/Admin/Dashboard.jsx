@@ -69,7 +69,7 @@ const Dashboard = () => {
                   <h4>{item.slotdate}</h4>
                 </div>
 
-                <div className='table-cell2'>{item.canceled?<h4 className='cano2'>Cancelled</h4>:item.iscompleted?<h4 className='cano5'>Completed</h4>:<MdCancel className='can-ico2' onClick={()=>cancelappointment(item._id)}/>}</div>
+                <div className='table-cell2'>{item.canceled?<h4 className='cano2'>Cancelled</h4>:item.iscompleted?<h4 className='cano5'>Completed</h4>:<h4 className='cano2' onClick={()=>cancelappointment(item._id)}>Revoke Appointment</h4>}</div>
 
               </div>
             ))
