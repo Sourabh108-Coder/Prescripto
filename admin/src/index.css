@@ -1288,9 +1288,15 @@ code {
     padding: 17px 12px;
   }
 
+  .mob_hid
+  {
+    display:none;
+  }
+
   .all-appointments-page .appointments-title {
     gap: 12px;
     margin-bottom: 20px;
+    margin-left:1rem;
   }
 
   .all-appointments-page .appointments-title-icon {
@@ -1318,9 +1324,7 @@ code {
   }
 
   .all-appointments-page .appointments-panel-header {
-    align-items: flex-start;
-    padding: 0 0 15px;
-    border-bottom: none;
+   display:none;
   }
 
   .all-appointments-page .appointments-panel-header h2 {

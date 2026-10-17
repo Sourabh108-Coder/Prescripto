@@ -28,7 +28,7 @@ const Allappointments = () => {
 
         <div>
           <h1 className="all-doc">All Appointments</h1>
-          <p>Manage and track all patient appointments</p>
+          <p className = "mob_hid">Manage and track all patient appointments</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ const Allappointments = () => {
         <div className="appointments-panel-header">
           <div>
             <h2>Appointment Records</h2>
-            <p>View patient details and appointment status</p>
+            <p className = "mob_hid">View patient details and appointment status</p>
           </div>
 
           <div className="appointments-count">
