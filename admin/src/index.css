@@ -1295,6 +1295,8 @@ code {
     overflow-x: clip;
   }
 
+
+
  
   /* Page heading */
 
@@ -1418,7 +1420,7 @@ code {
     box-sizing: border-box;
 
     background: #ffffff;
-    border: 1px solid #e5edf5;
+    border:2px solid #4f5697;
     border-radius: 18px;
     box-shadow: 0 5px 18px rgba(15, 23, 42, 0.045);
 
@@ -1444,7 +1446,7 @@ code {
 
     min-width: 0;
     padding: 12px 0;
-    color: #334155;
+    color: black;
     font-size: 13px;
     line-height: 1.5;
 
