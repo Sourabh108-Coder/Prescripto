@@ -1650,8 +1650,9 @@ code {
     align-self: flex-start;
     gap: 7px;
 
-    width: fit-content;
-    max-width: 100%;
+    /* width: fit-content; */
+    /* max-width: 100%; */
+    width:90%;
     padding: 8px 12px;
 
     border-radius: 9px;
