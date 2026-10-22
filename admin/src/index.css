@@ -1038,9 +1038,10 @@ code {
   .add-doctor-form {
     padding-left: 0px;
     border-radius: 17px;
-    width:77.8vw !important;
+    width:77vw !important;
     /* border:2px solid black; */
     margin-left:0.4rem;
+    overflow-x:hidden;
   }
 
   .add-doctor-page {
@@ -1066,6 +1067,7 @@ code {
   .doctor-profile-card {
     padding: 20px;
     gap: 18px;
+    width:17rem;
   }
 
   .doctor-image-label {
@@ -1075,6 +1077,7 @@ code {
 
   .doctor-form-section {
     padding: 24px 0;
+    width:17rem;
   }
 
   .doctor-fields-grid {
