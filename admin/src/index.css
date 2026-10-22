@@ -639,143 +639,647 @@ code {
   
 }
 
+/* Add doctor reponsive and normal */
 
-.add-doc
-{
-  display: flex;
-  width: 70vw;
-  border:2px solid #4f5697;
-  margin-top:1.3rem;
-  padding:5px;
-  overflow-y: scroll;
-  height:70.5vh;
-  scrollbar-width: none;
-}
-.add-doc::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
+/* =========================================
+   ADD DOCTOR PAGE
+========================================= */
+
+.add-doctor-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 24px 48px;
+  /* background: #f4f7fb; */
+  border: 2px solid black;
+  color: #172b4d;
+  box-sizing: border-box;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.doc-upload
-{
+.add-doctor-page *,
+.add-doctor-page *::before,
+.add-doctor-page *::after {
+  box-sizing: border-box;
+}
+
+.add-doctor-form {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px;
+  background: #ffffff;
+  /* border: 1px solid #e7edf5; */
+  border-radius: 20px;
+  /* box-shadow: 0 8px 35px rgba(30, 64, 115, 0.055); */
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.doctor-page-header {
   display: flex;
-  gap:10px;
   align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
 }
 
-.uploading
-{
-  width:150px;
-  height:150px;
-  border-radius: 200px;
-  margin-bottom: 1rem;
-  /* border:1px solid black; */
-}
-
-.formy
-{
+.doctor-header-icon {
   display: flex;
-  justify-content: space-between;
-  width: 66vw;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1687f8, #3865ed);
+  border-radius: 16px;
+  box-shadow: 0 7px 16px rgba(56, 101, 237, 0.2);
 }
 
-.form-left
-{
-  margin-left:2rem;
+.doctor-header-icon svg {
+  width: 29px;
+  height: 29px;
 }
 
-/* Basic select styling */
-.custom-select {
-  width: 300px; /* Width of the select box */
-  padding: 10px 15px; /* Padding for inner spacing */
-  font-size: 16px; /* Font size */
-  color: #34495e; /* Text color */
-  background-color: #ecf0f1; /* Light background color */
-  border: 2px solid #007BFF; /* Border color */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  transition: all 0.3s ease; /* Smooth transition for hover and focus */
-  appearance: none; /* Remove default arrow (for modern browsers) */
-  margin-top: 0.5rem;
+.doctor-page-header h1 {
+  margin: 0 0 7px;
+  color: #152b49;
+  font-size: 28px;
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.7px;
 }
 
-/* Select box hover effect */
-.custom-select:hover {
-  border-color: #3498db; /* Change border color on hover */
-  background-color: #f5f7f9; /* Lighten background color on hover */
+.doctor-page-header p {
+  margin: 0;
+  color: #77869b;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
-/* Focus effect for select */
-.custom-select:focus {
-  outline: none; /* Remove default outline */
-  border-color: #3498db; /* Highlight border on focus */
-  background-color: #ffffff; /* Change background when focused */
+/* =========================================
+   PROFILE IMAGE UPLOAD
+========================================= */
+
+.doctor-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 24px;
+  margin-bottom: 30px;
+  background: #f7faff;
+  border: 1px solid #e4edfb;
+  border-radius: 16px;
 }
 
-/* Option styling */
-.custom-select option {
-  padding: 10px;
-  font-size: 16px;
-  color: #34495e; /* Text color for options */
-  background-color: #ffffff; /* Background color for options */
+.doctor-profile-upload {
+  flex-shrink: 0;
 }
 
-/* Option hover effect */
-.custom-select option:hover {
-  background-color: #3498db; /* Background color on hover */
-  color: white; /* Text color on hover */
-}
-
-
-.input-field1 {
-  width: 62%;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  margin-top: 8px;
-  outline: none;
-  transition: border-color 0.3s ease;
-  border:2px solid #007BFF;
-}
-
-/* Focus effect on input fields */
-.input-field1:focus {
-  border-color: #4CAF50;
-}
-
-.tesu
-{
-  margin-left: 2rem;
-}
-
-.submit-btn2 {
-  width: 30%;
-  padding: 12px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 8px;
+.doctor-image-label {
+  position: relative;
+  display: block;
+  width: 108px;
+  height: 108px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left:20rem;
-  margin-top: 2rem;
-  margin-bottom:2rem;
 }
 
-/* Hover effect on submit button */
-.submit-btn2:hover {
-  background-color: #007BFF;
+.doctor-profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(26, 56, 99, 0.13);
+  transition: transform 0.2s ease;
 }
 
-.submit-btn2:focus {
+.doctor-image-label:hover .doctor-profile-image {
+  transform: scale(1.04);
+}
+
+.doctor-upload-badge {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  color: #ffffff;
+  background: #2878f0;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.doctor-profile-text h3 {
+  margin: 0 0 7px;
+  color: #213854;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.doctor-profile-text p {
+  margin: 0 0 12px;
+  color: #77869b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.doctor-upload-link {
+  display: inline-block;
+  color: #216de0;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.doctor-upload-link:hover {
+  color: #1254bc;
+  text-decoration: underline;
+}
+
+/* =========================================
+   FORM SECTIONS
+========================================= */
+
+.doctor-form-section {
+  padding: 28px 0;
+  border-top: 1px solid #edf1f7;
+}
+
+.doctor-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.doctor-section-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  color: #286de0;
+  background: #edf4ff;
+  border: 1px solid #dce9ff;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.doctor-section-heading h2 {
+  margin: 0 0 5px;
+  color: #1d3452;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.2px;
+}
+
+.doctor-section-heading p {
+  margin: 0;
+  color: #8491a5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.doctor-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 25px;
+}
+
+.doctor-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.doctor-field > label {
+  color: #344862;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.doctor-field > label span,
+.doctor-form-footer > p span {
+  color: #e34c5b;
+}
+
+/* =========================================
+   INPUTS AND SELECTS
+========================================= */
+
+.doctor-field input,
+.doctor-field select,
+.doctor-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  margin: 0;
+  padding: 12px 14px;
+  color: #253b57;
+  background-color: #ffffff;
+  border: 1px solid #dce4ef;
+  border-radius: 10px;
   outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.hi-doc
-{
-  margin-left: 3rem;
-  font-family: 'Times New Roman', Times, serif;
+.doctor-field input::placeholder,
+.doctor-field textarea::placeholder {
+  color: #a0adbd;
+  opacity: 1;
 }
+
+.doctor-field input:hover,
+.doctor-field select:hover,
+.doctor-field textarea:hover {
+  border-color: #b6c9e3;
+}
+
+.doctor-field input:focus,
+.doctor-field select:focus,
+.doctor-field textarea:focus {
+  border-color: #4385ef;
+  box-shadow: 0 0 0 4px rgba(55, 122, 237, 0.1);
+}
+
+.doctor-field select {
+  cursor: pointer;
+  padding-right: 35px;
+}
+
+.doctor-field textarea {
+  min-height: 145px;
+  resize: vertical;
+  line-height: 1.75;
+}
+
+.doctor-fee-input {
+  position: relative;
+  width: 100%;
+}
+
+.doctor-fee-input > span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  z-index: 1;
+  color: #637895;
+  font-size: 15px;
+  font-weight: 700;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.doctor-fee-input input {
+  padding-left: 34px;
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.doctor-about-section {
+  padding-bottom: 30px;
+}
+
+/* =========================================
+   FOOTER AND SUBMIT BUTTON
+========================================= */
+
+.doctor-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 25px;
+  border-top: 1px solid #edf1f7;
+}
+
+.doctor-form-footer > p {
+  margin: 0;
+  color: #8794a6;
+  font-size: 12px;
+}
+
+.doctor-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 49px;
+  padding: 0 25px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #287ff0, #345fe5);
+  border: none;
+  border-radius: 11px;
+  box-shadow: 0 6px 14px rgba(44, 103, 225, 0.2);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.doctor-submit-button svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+.doctor-submit-button:hover {
+  filter: brightness(1.04);
+  box-shadow: 0 9px 20px rgba(44, 103, 225, 0.28);
+  transform: translateY(-2px);
+}
+
+.doctor-submit-button:hover svg {
+  transform: translateX(3px);
+}
+
+.doctor-submit-button:active {
+  transform: translateY(0);
+}
+
+.doctor-submit-button:focus-visible {
+  outline: 3px solid #a9cbff;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 768px) {
+  .add-doctor-page {
+    padding: 24px 16px 35px;
+  }
+
+  .add-doctor-form {
+    padding: 27px 23px;
+    border-radius: 17px;
+  }
+
+  .doctor-page-header {
+    gap: 14px;
+    margin-bottom: 25px;
+  }
+
+  .doctor-header-icon {
+    width: 49px;
+    height: 49px;
+    border-radius: 14px;
+  }
+
+  .doctor-page-header h1 {
+    font-size: 24px;
+  }
+
+  .doctor-profile-card {
+    padding: 20px;
+    gap: 18px;
+  }
+
+  .doctor-image-label {
+    width: 90px;
+    height: 90px;
+  }
+
+  .doctor-form-section {
+    padding: 24px 0;
+  }
+
+  .doctor-fields-grid {
+    gap: 20px 18px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+  .add-doctor-page {
+    min-height: 100vh;
+    padding: 14px 10px 25px;
+  }
+
+  .add-doctor-form {
+    padding: 22px 16px;
+    border-radius: 15px;
+    box-shadow: 0 4px 18px rgba(30, 64, 115, 0.05);
+  }
+
+  .doctor-page-header {
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 23px;
+  }
+
+  .doctor-header-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .doctor-header-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .doctor-page-header h1 {
+    margin-bottom: 6px;
+    font-size: 21px;
+    letter-spacing: -0.4px;
+  }
+
+  .doctor-page-header p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .doctor-profile-card {
+    align-items: center;
+    gap: 14px;
+    padding: 16px 12px;
+    margin-bottom: 23px;
+    border-radius: 13px;
+  }
+
+  .doctor-image-label {
+    width: 72px;
+    height: 72px;
+  }
+
+  .doctor-profile-image {
+    border-width: 3px;
+  }
+
+  .doctor-upload-badge {
+    right: -1px;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+    font-size: 19px;
+  }
+
+  .doctor-profile-text h3 {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .doctor-profile-text p {
+    margin-bottom: 7px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .doctor-upload-link {
+    font-size: 12px;
+  }
+
+  .doctor-form-section {
+    padding: 21px 0;
+  }
+
+  .doctor-section-heading {
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 19px;
+  }
+
+  .doctor-section-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 11px;
+  }
+
+  .doctor-section-heading h2 {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .doctor-section-heading p {
+    font-size: 11px;
+  }
+
+  .doctor-fields-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .doctor-field {
+    gap: 8px;
+  }
+
+  .doctor-field > label {
+    font-size: 12px;
+  }
+
+  .doctor-field input,
+  .doctor-field select,
+  .doctor-field textarea {
+    min-height: 47px;
+    padding: 12px;
+    border-radius: 9px;
+    font-size: 13px;
+  }
+
+  .doctor-field select {
+    padding-right: 30px;
+  }
+
+  .doctor-fee-input > span {
+    left: 13px;
+  }
+
+  .doctor-fee-input input {
+    padding-left: 32px;
+  }
+
+  .doctor-field textarea {
+    min-height: 130px;
+  }
+
+  .doctor-about-section {
+    padding-bottom: 23px;
+  }
+
+  .doctor-form-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding-top: 20px;
+  }
+
+  .doctor-form-footer > p {
+    font-size: 11px;
+  }
+
+  .doctor-submit-button {
+    width: 100%;
+    min-height: 49px;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 350px) {
+  .add-doctor-page {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+
+  .add-doctor-form {
+    padding: 18px 12px;
+  }
+
+  .doctor-profile-card {
+    gap: 10px;
+    padding: 13px 9px;
+  }
+
+  .doctor-image-label {
+    width: 62px;
+    height: 62px;
+  }
+
+  .doctor-page-header h1 {
+    font-size: 19px;
+  }
+}
+
+
+/* add doctor css ends */
 
 .doc-fet
 {
@@ -799,11 +1303,7 @@ code {
   margin:1rem;
 }
 
-.doc-img
-{
-  width:300px;
-  height:300px;
-}
+
 
 .doc-card
 {
