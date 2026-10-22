@@ -650,10 +650,12 @@ code {
   min-height: 100vh;
   padding: 32px 24px 48px;
   /* background: #f4f7fb; */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   color: #172b4d;
   box-sizing: border-box;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  overflow-y:scroll;
+  scrollbar-width:none;
 }
 
 .add-doctor-page *,
@@ -1033,13 +1035,17 @@ code {
 ========================================= */
 
 @media (max-width: 768px) {
-  .add-doctor-page {
-    padding: 24px 16px 35px;
+  .add-doctor-form {
+    padding-left: 0px;
+    border-radius: 17px;
+    width:77.8vw !important;
+    /* border:2px solid black; */
+    margin-left:0.4rem;
   }
 
-  .add-doctor-form {
-    padding: 27px 23px;
-    border-radius: 17px;
+  .add-doctor-page {
+    padding-top: 1rem;
+    padding-left:0;
   }
 
   .doctor-page-header {
@@ -1083,13 +1089,14 @@ code {
 @media (max-width: 520px) {
   .add-doctor-page {
     min-height: 100vh;
-    padding: 14px 10px 25px;
+    /* padding: 14px 10px 25px; */
   }
 
   .add-doctor-form {
-    padding: 22px 16px;
+    /* padding: 22px 16px; */
     border-radius: 15px;
-    box-shadow: 0 4px 18px rgba(30, 64, 115, 0.05);
+    /* border:2px solid green; */
+    /* box-shadow: 0 4px 18px rgba(30, 64, 115, 0.05); */
   }
 
   .doctor-page-header {
@@ -1254,14 +1261,14 @@ code {
 ========================================= */
 
 @media (max-width: 350px) {
-  .add-doctor-page {
+  /* .add-doctor-page {
     padding-right: 7px;
     padding-left: 7px;
-  }
+  } */
 
-  .add-doctor-form {
+  /* .add-doctor-form {
     padding: 18px 12px;
-  }
+  } */
 
   .doctor-profile-card {
     gap: 10px;
