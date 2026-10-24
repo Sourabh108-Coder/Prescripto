@@ -1345,6 +1345,8 @@ code {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
     margin-left:3rem;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 /* ===== Header ===== */
