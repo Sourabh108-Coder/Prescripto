@@ -2770,10 +2770,11 @@ h4 {
   margin-top: 1.2rem;
   width:100vw;
   padding:5px;
-  /* overflow-y: scroll; */
-  /* height: 90.5vh; */
-  /* scrollbar-width: none; */
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none;
   margin:auto;
+  padding-right:2rem;
 }
 
 .cano5
