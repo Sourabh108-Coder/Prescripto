@@ -4347,8 +4347,10 @@ h4 {
 
   /* Appointments panel */
   .da-appointments-panel {
-    overflow: hidden;
-    border: 1px solid #e7edf7;
+    /* overflow: hidden; */
+    /* border: 1px solid #e7edf7; */
+    width:17.5rem;
+    /* border: 1px solid red; */
     border-radius: 19px;
     background: #fff;
     box-shadow: 0 8px 28px rgba(35, 57, 95, 0.055);
