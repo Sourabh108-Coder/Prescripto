@@ -4412,7 +4412,7 @@ h4 {
   }
 
   .da-cell {
-    min-width: 0;
+    min-width: 0;    
     padding: 13px 14px;
     color: #536178;
     font-size: 12px;
@@ -4630,6 +4630,9 @@ h4 {
     border-radius: 9px;
     font-size: 11px;
     font-weight: 800;
+    /* border:7px solid red; */
+    width:80%;
+    margin:auto;
   }
 
   .da-status-completed {
