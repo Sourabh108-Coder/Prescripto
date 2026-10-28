@@ -4267,11 +4267,17 @@ h4 {
    MOBILE & SMALL SCREENS
 ========================================= */
 
+
+/* =========================================
+   MOBILE — PREMIUM APPOINTMENT CARDS
+========================================= */
+
 @media (max-width: 760px) {
   .da-page {
     padding: 19px 13px 28px;
   }
 
+  /* Keep your existing heading and statistics design */
   .da-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -4339,19 +4345,24 @@ h4 {
     font-size: 10px;
   }
 
+  /* Appointments panel */
   .da-appointments-panel {
-    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e7edf7;
+    border-radius: 19px;
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(35, 57, 95, 0.055);
   }
 
   .da-panel-heading {
     align-items: flex-start;
     flex-direction: column;
     gap: 12px;
-    padding: 19px 16px;
+    padding: 20px 17px;
   }
 
   .da-panel-heading h2 {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .da-panel-heading p {
@@ -4359,132 +4370,324 @@ h4 {
   }
 
   .da-record-count {
-    padding: 7px 10px;
+    padding: 7px 11px;
+    border-radius: 8px;
   }
 
-  /* Turn every appointment into a mobile card */
-
+  /* Remove desktop table headings */
   .da-table-header {
     display: none;
   }
 
+  /* List container */
   .da-table-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 13px;
+    gap: 14px;
     padding: 13px;
-    background: #f8faff;
+    background: #f5f8fd;
   }
 
+  /* Individual appointment card */
   .da-table.da-table-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 18px 12px;
-    padding: 17px 14px;
-    border: 1px solid #e8edf6;
-    border-radius: 15px;
-    background: #ffffff;
-    box-shadow: 0 3px 12px rgba(30, 55, 90, 0.025);
+    gap: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e5ebf5;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(32, 54, 91, 0.045);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
   }
 
-  .da-table-row:hover {
-    background: #ffffff;
+  .da-table.da-table-row:hover {
+    background: #fff;
+    border-color: #d4e1f6;
+    box-shadow: 0 7px 20px rgba(32, 54, 91, 0.075);
   }
 
   .da-cell {
     min-width: 0;
+    padding: 13px 14px;
+    color: #536178;
     font-size: 12px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
   }
 
   .da-cell::before {
     display: block;
-    margin-bottom: 8px;
-    color: #96a0b1;
+    margin-bottom: 7px;
+    color: #8995a9;
     content: attr(data-label);
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.8px;
     text-transform: uppercase;
   }
 
-  .da-index {
+  /* Appointment number — card header */
+  .da-table-row .da-index {
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
-    gap: 9px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #eef1f6;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px 15px;
+    border-bottom: 1px solid #edf1f7;
+    background: linear-gradient(120deg, #f8faff, #fff);
   }
 
   .da-index::before {
-    display: inline;
     margin: 0;
-    content: "APPOINTMENT";
+    color: #6d7b92;
+    content: "APPOINTMENT DETAILS";
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
-  .da-patient {
-    align-items: flex-start;
-    gap: 8px;
+  .da-index span {
+    min-width: 34px;
+    height: 30px;
+    border: 1px solid #dfe8fa;
+    border-radius: 9px;
+    background: #edf3ff;
+    color: #285dc4;
+    font-size: 11px;
+  }
+
+  /* Patient profile */
+  .da-table-row .da-patient {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 15px 8px;
+  }
+
+  .da-patient::before {
+    display: none;
   }
 
   .da-patient .da-avatar {
-    width: 33px;
-    height: 33px;
-    border-radius: 10px;
-    font-size: 13px;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #dce9ff, #eae7ff);
+    color: #315ac3;
+    font-size: 17px;
+    box-shadow: 0 0 0 1px #e0e8f8;
+  }
+
+  .da-patient-info {
+    gap: 4px;
   }
 
   .da-patient-info strong {
-    font-size: 11px;
+    color: #202e46;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
   }
 
   .da-patient-info span {
-    font-size: 10px;
+    color: #8995a9;
+    font-size: 11px;
   }
 
-  .da-email {
-    overflow-wrap: anywhere;
+  /* Email takes a full row for readability */
+  .da-table-row .da-email {
+    grid-column: 1 / -1;
+    padding: 8px 15px 14px;
+    border-bottom: 1px solid #edf1f7;
+    color: #65738b;
     font-size: 11px;
+  }
+
+  .da-email::before {
+    margin-bottom: 5px;
+  }
+
+  /* Date and time */
+  .da-table-row .da-datetime {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-height: 92px;
+    border-right: 1px solid #edf1f7;
+    border-bottom: 1px solid #edf1f7;
+    background: #f7faff;
+  }
+
+  .da-datetime::before {
+    margin-bottom: 3px;
   }
 
   .da-datetime strong {
-    font-size: 11px;
+    color: #263b60;
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .da-datetime span {
-    font-size: 10px;
+    color: #3868c4;
+    font-size: 11px;
+    font-weight: 650;
+  }
+
+  /* Fees */
+  .da-table-row .da-fees {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-height: 92px;
+    border-bottom: 1px solid #edf1f7;
+    background: #fff;
+  }
+
+  .da-fees::before {
+    margin-bottom: 3px;
+  }
+
+  .da-fees strong {
+    color: #202f48;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  /* Payment method */
+  .da-table-row > .da-cell[data-label="Payment"] {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 13px 15px;
+    border-bottom: 1px solid #edf1f7;
+  }
+
+  .da-table-row > .da-cell[data-label="Payment"]::before {
+    margin-bottom: 0;
   }
 
   .da-payment {
-    padding: 7px 9px;
-    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 750;
   }
 
-  .da-actions {
+  .da-payment-online {
+    border-color: #d9e6ff;
+    background: #eef4ff;
+    color: #3266cc;
+  }
+
+  .da-payment-cash {
+    border-color: #f5e3bd;
+    background: #fff7e8;
+    color: #ad731b;
+  }
+
+  /* Status and actions */
+  .da-table-row .da-actions {
     grid-column: 1 / -1;
-    padding-top: 13px;
-    border-top: 1px solid #eef1f6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 15px 16px;
+    border-top: 0;
+    background: #fff;
   }
 
   .da-actions::before {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
+  .da-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .da-status-completed {
+    border-color: #cceedd;
+    background: #eaf9f0;
+    color: #138557;
+  }
+
+  .da-status-cancelled {
+    border-color: #ffdada;
+    background: #fff0f0;
+    color: #d34343;
+  }
+
+  /* Side-by-side buttons with equal widths */
   .da-action-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
     gap: 9px;
   }
 
   .da-action-btn {
-    min-height: 39px;
-    padding: 9px 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    min-width: 0;
+    min-height: 43px;
+    padding: 10px 8px;
+    border: 1px solid transparent;
+    border-radius: 11px;
     font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
   }
 
-  .da-status {
-    padding: 8px 10px;
-    font-size: 11px;
+  .da-action-btn svg {
+    flex-shrink: 0;
+    font-size: 15px;
   }
 
+  .da-complete-btn {
+    border-color: #cceedd;
+    background: #eaf9f0;
+    color: #138557;
+  }
+
+  .da-cancel-btn {
+    border-color: #ffdada;
+    background: #fff1f1;
+    color: #d74747;
+  }
+
+  .da-action-btn:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Empty state */
   .da-empty-state {
     min-height: 290px;
     padding: 35px 20px;
@@ -4542,20 +4745,52 @@ h4 {
 
   .da-table-wrapper {
     padding: 9px;
+    gap: 11px;
   }
 
   .da-table.da-table-row {
-    gap: 16px 9px;
-    padding: 13px 10px;
+    border-radius: 14px;
+  }
+
+  .da-cell {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
+  .da-table-row .da-index,
+  .da-table-row .da-patient,
+  .da-table-row .da-email,
+  .da-table-row .da-actions,
+  .da-table-row > .da-cell[data-label="Payment"] {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .da-patient .da-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .da-patient-info strong {
+    font-size: 12px;
+  }
+
+  .da-datetime strong {
+    font-size: 11px;
+  }
+
+  .da-fees strong {
+    font-size: 14px;
   }
 
   .da-action-group {
-    gap: 6px;
+    gap: 7px;
   }
 
   .da-action-btn {
     gap: 5px;
-    padding: 8px 9px;
+    min-height: 41px;
+    padding: 9px 5px;
     font-size: 10px;
   }
 }
@@ -4576,3 +4811,5 @@ h4 {
     transform: none;
   }
 }
+
+/* Doctor appt css ends */
