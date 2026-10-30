@@ -635,7 +635,7 @@ code {
   height:75vh;
   position: relative;;
   width:95vw;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
   
 }
 
@@ -2960,23 +2960,33 @@ h4 {
 
 /* ************************************************************************ */
 
+/* Profile css starts */
 
 .profile-container
 {
-  width:70vw;
+  width:76vw;
   padding:1rem;
+  border:2px solid #4f5697;
+  margin:auto;
 }
 
 .up-sec
 {
   display: flex;
-  gap:10px;
+  gap:8rem;
+  margin:auto;
+  width:100%;
+  justify-content: center;
+  align-items: start;
 }
 
 .profile-image2
 {
-  width:400px;
+  width:300px;
   height:300px;
+  border-radius: 400px;
+  border:4px solid #4f5697;
+  object-fit: contain;
 }
 
 .profile-details
@@ -2985,7 +2995,7 @@ h4 {
   display: flex;
   flex-direction: column;
   gap:10px;
-  border-left: 5px solid #007BFF;
+  /* border-left: 5px solid #007BFF;x */
   padding-left: 1rem;
   border-radius: 5px;
 }
@@ -3170,7 +3180,7 @@ h4 {
   color: transparent;  /* Hides placeholder text on focus */
 }
 
-
+/* Doctor profile page css ends */
 .no-appointments {
   display: flex;
   flex-direction: column;
