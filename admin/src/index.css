@@ -2966,7 +2966,7 @@ h4 {
 {
   width:76vw;
   padding:1rem;
-  border:2px solid #4f5697;
+  
   margin:auto;
 }
 
@@ -3000,10 +3000,17 @@ h4 {
   border-radius: 5px;
 }
 
+.profile-details h1
+{
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
 .education-info
 {
   display: flex;
-  gap:15px;
+  gap:8rem;
   align-items: center;
 }
 
